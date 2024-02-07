@@ -1,13 +1,18 @@
-import { Home }  from "./home";
-import { Navbar } from "./navbar";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { SignUpOne, SignUpTwo, SignUpThree } from './signUp';
+import { Home } from './home';
 
-function App() {
+export default function App() {
   return (
-    <>
-      <Navbar />
-      <Home />
-    </>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signup" element={<SignUpOne />} />
+          <Route path="/signup-two" element={<SignUpTwo />} />
+          <Route path="/signup-complete" element={<SignUpThree />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
-
-export default App;
