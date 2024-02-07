@@ -1,5 +1,7 @@
 import { Navbar } from '../navbar';
-import { All, Popular, Random } from './';
+import { All } from './all';
+import { Popular } from './popular';
+import { Random } from './random';
 
 export function Home() {
   return (
