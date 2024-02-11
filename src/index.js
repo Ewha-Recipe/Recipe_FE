@@ -1,14 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+//import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+import PopularRecipeBoxList from "./recipehome/PopularRecipeBoxList";
+import RandomRecipeBoxList from "./recipehome/RandomRecipeBoxList";
+import Navbar from "./navbar/Navbar";
+import AllRecipeBoxList from "./recipehome/AllRecipeBoxList";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+ReactDOM.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <Navbar />
+    <PopularRecipeBoxList />
+    <RandomRecipeBoxList />
+    <AllRecipeBoxList />
+  </React.StrictMode>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
