@@ -6,11 +6,6 @@ import reportWebVitals from "./reportWebVitals";
 
 import Login from "./login/Login";
 
-//import PopularRecipeBoxList from "./recipehome/PopularRecipeBoxList";
-//import RandomRecipeBoxList from "./recipehome/RandomRecipeBoxList";
-//import Navbar from "./navbar/Navbar";
-//import AllRecipeBoxList from "./recipehome/AllRecipeBoxList";
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 ReactDOM.render(
@@ -18,18 +13,6 @@ ReactDOM.render(
     <Login />
   </React.StrictMode>
 );
-
-/*
-ReactDOM.render(
-  <React.StrictMode>
-    <Navbar />
-    <PopularRecipeBoxList />
-    <RandomRecipeBoxList />
-    <AllRecipeBoxList />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
-*/
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
