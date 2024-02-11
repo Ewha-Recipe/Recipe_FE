@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import logo from './logo.png';
-import nicknameIcon from './nickname-icon.png';
-import emailIcon from './email-icon.png';
-import preferenceIcon from './preference-icon.png';
-import uploadIcon from './upload-icon.png';
+// import logo from './logo.png';
+// import nicknameIcon from './nickname-icon.png';
+// import emailIcon from './email-icon.png';
+// import preferenceIcon from './preference-icon.png';
+// import uploadIcon from './upload-icon.png';
 
 export const SignUpTwo = () => {
   const navigate = useNavigate();

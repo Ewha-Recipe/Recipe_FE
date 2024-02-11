@@ -1,3 +1,2 @@
-export * from './SignUpOne';
+export * from './SignUpForm';
 export * from './SignUpTwo';
-export * from './SignupThree';

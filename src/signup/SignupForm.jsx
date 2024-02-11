@@ -1,11 +1,10 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const SignupForm = () => {
+export const SignUpForm = () => {
   return (
     <>
       <div className="container">
-        <img className="logo" src={`${process.env.PUBLIC_URL}/assets/ewharecipeLogo.png`} alt="logo" />
+        <img className="logo" src={`${process.env.PUBLIC_URL}/assets/logo.png`} alt="logo" />
         <h1 className="title">회원가입</h1>
         <div className="signup-form">
           <div className="input-box">
