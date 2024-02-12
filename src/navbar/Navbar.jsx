@@ -1,5 +1,4 @@
-import React from "react";
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const NavbarContainer = styled.div`
   height: 150px;
@@ -29,10 +28,10 @@ const Button = styled.button`
   margin-left: 30px;
 `;
 
-function Navbar() {
+export function Navbar() {
   return (
     <NavbarContainer>
-      <LogoImage src="./ewharecipeLogo.png" alt="Ewha Recipe Logo" />
+      <LogoImage src="./assets/ewharecipeLogo.png" alt="Ewha Recipe Logo" />
       <ButtonContainer>
         <Button>로그인</Button>
         <Button>회원가입</Button>
@@ -40,5 +39,3 @@ function Navbar() {
     </NavbarContainer>
   );
 }
-
-export default Navbar;
