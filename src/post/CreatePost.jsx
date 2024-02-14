@@ -51,7 +51,7 @@ const Form = styled.form`
 `;
 
 const Input = styled.input`
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding: 15px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -60,7 +60,7 @@ const Input = styled.input`
 `;
 
 const Select = styled.select`
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding: 15px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -133,6 +133,7 @@ const FileInput = styled.input`
 export function CreatePost() {
   const [image, setImage] = useState(null);
   const navigate = useNavigate();
+  const STAR_OPTION = [1, 2, 3, 4, 5];
   const MENU_OPTION = ['한식', '일식', '중식', '양식', '분식', '디저트'];
 
   const handleImageChange = event => {
@@ -173,6 +174,16 @@ export function CreatePost() {
             <Form>
               <Input placeholder="제목" />
               <Input placeholder="날짜" type="date" />
+              <Select defaultValue="">
+                <option value="" disabled>
+                  난이도 선택
+                </option>
+                {STAR_OPTION.map(star => (
+                  <option key={star} value={star}>
+                    {star}
+                  </option>
+                ))}
+              </Select>
               <Select defaultValue="">
                 <option value="" disabled>
                   카테고리 선택
