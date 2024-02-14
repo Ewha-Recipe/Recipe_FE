@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { RecipeBox } from "./recipeBox";
-import { recipes } from "./home.const";
+import styled from 'styled-components';
+import { RecipeBox } from './recipeBox';
+import { recipes } from './home.const';
 
 const AllRecipeBoxContainer = styled.div`
   display: flex;
@@ -20,20 +20,18 @@ export function All() {
     <div>
       <Title>전체 레시피</Title>
       <AllRecipeBoxContainer>
-        {recipes.map(
-          ({ profileImage, nickname, foodImage, foodName, difficulty }) => (
-            <RecipeBox
-              key={nickname}
-              profileImage={profileImage}
-              nickname={nickname}
-              foodImage={foodImage}
-              foodName={foodName}
-              difficulty={difficulty}
-              width="315px"
-              height="315px"
-            />
-          ),
-        )}
+        {recipes.map(({ profileImage, nickname, foodImage, foodName, difficulty }) => (
+          <RecipeBox
+            key={nickname}
+            profileImage={profileImage}
+            nickname={nickname}
+            foodImage={foodImage}
+            foodName={foodName}
+            difficulty={difficulty}
+            width="315px"
+            height="315px"
+          />
+        ))}
       </AllRecipeBoxContainer>
     </div>
   );
