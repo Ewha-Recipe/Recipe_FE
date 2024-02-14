@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 const NavbarContainer = styled.div`
   height: 150px;
@@ -29,10 +30,17 @@ const Button = styled.button`
 `;
 
 export function Navbar() {
+  const navigate = useNavigate();
+
+  const handlePost = () => {
+    navigate('/foods');
+  };
+
   return (
     <NavbarContainer>
       <LogoImage src="./assets/ewharecipeLogo.png" alt="Ewha Recipe Logo" />
       <ButtonContainer>
+        <Button onClick={handlePost}>레시피 등록</Button>
         <Button>로그인</Button>
         <Button>회원가입</Button>
       </ButtonContainer>
