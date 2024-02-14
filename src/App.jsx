@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { SignUpTwo } from './signUp';
+import { SignupForm } from './signUp/SignupForm';
 import { Home } from './home';
+import { CreatePost } from './post/CreatePost';
 
 export default function App() {
   return (
@@ -8,7 +9,8 @@ export default function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/signup" element={<SignUpTwo />} />
+          <Route path="/signup" element={<SignupForm />} />
+          <Route path="/foods" element={<CreatePost />} />
         </Routes>
       </div>
     </Router>
