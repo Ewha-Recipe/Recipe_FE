@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+<<<<<<< HEAD
 const SignupForm = () => {
 
   return (
@@ -8,6 +9,14 @@ const SignupForm = () => {
       <div className="container">
         <img className="logo" src={`${process.env.PUBLIC_URL}/assets/logo.png`} alt="logo" />
         <h1 className='title'>회원가입</h1>
+=======
+export const SignupForm = () => {
+  return (
+    <>
+      <div className="container">
+        <img className="logo" src={`${process.env.PUBLIC_URL}/assets/ewharecipeLogo.png`} alt="logo" />
+        <h1 className="title">회원가입</h1>
+>>>>>>> ad1ec6d (refactor: signup 파일 이름 수정)
         <div className="signup-form">
           <div className="input-box">
             <span className="icon">
