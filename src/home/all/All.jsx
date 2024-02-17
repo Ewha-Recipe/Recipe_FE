@@ -1,25 +1,12 @@
-import styled from 'styled-components';
-import { RecipeBox } from './recipeBox';
-import { recipes } from './home.const';
-
-const AllRecipeBoxContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 100px;
-  justify-content: space-around;
-`;
-
-const Title = styled.h2`
-  font-size: 32px;
-  text-align: center;
-  margin-top: 80px;
-`;
+import * as S from './all.style';
+import { RecipeBox } from '../recipeBox';
+import { recipes } from '../home.const';
 
 export function All() {
   return (
     <div>
-      <Title>전체 레시피</Title>
-      <AllRecipeBoxContainer>
+      <S.Title>전체 레시피</S.Title>
+      <S.AllRecipeBoxContainer>
         {recipes.map(({ profileImage, nickname, foodImage, foodName, difficulty }) => (
           <RecipeBox
             key={nickname}
@@ -32,7 +19,7 @@ export function All() {
             height="315px"
           />
         ))}
-      </AllRecipeBoxContainer>
+      </S.AllRecipeBoxContainer>
     </div>
   );
 }

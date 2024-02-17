@@ -1,18 +1,17 @@
 import * as S from './recipeBox.style';
 
-// TODO: props 디스트럭쳐링 하기
-export function RecipeBox(props) {
+export function RecipeBox({ width, height, foodImage, profileImage, nickname, foodName, difficulty }) {
   return (
     <S.RecipeContainer>
-      <S.FoodImageContainer width={props.width} height={props.height} src={props.foodImage} />
+      <S.FoodImageContainer width={width} height={height} src={foodImage} />
       <S.ProfileContainer>
-        <S.ProfileImage src={props.profileImage} />
-        <S.Nickname>{props.nickname}</S.Nickname>
+        <S.ProfileImage src={profileImage} />
+        <S.Nickname>{nickname}</S.Nickname>
       </S.ProfileContainer>
-      <S.FoodName>{props.foodName}</S.FoodName>
+      <S.FoodName>{foodName}</S.FoodName>
       <S.DifficultyContainer>
         <S.Difficulty>난이도</S.Difficulty>
-        <S.StarImage src={props.difficulty} />
+        <S.StarImage src={difficulty} />
       </S.DifficultyContainer>
     </S.RecipeContainer>
   );
