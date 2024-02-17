@@ -1,0 +1,163 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* signup */
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0; 
+  display: flex;
+  justify-content: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  justify-content: space-around;
+}
+
+.logo {
+  height: 80px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 28px;
+}
+
+#login-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-form {
+  padding: 30px;
+  margin-top: 20px;
+text-align: center;
+}
+
+.signup-form input {
+  width: 300px;
+  padding: 20px;
+  margin-bottom: 30px;
+  border: 2px solid #a4a4a4;
+  border-radius: 5px;
+  display: block;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.move-button {
+  width: 200px;
+  border: none;
+  background: #001800;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  height: 50px;
+  margin: 0 40px;
+  font-size: 16px;
+}
+
+.move-button:hover {
+  background: #424242;
+}
+
+.icon {
+  padding-right: 10px;
+  padding-bottom: 20px;
+}
+
+.icon img {
+  width: 35px;
+  height: 35px;
+}
+
+.input-box span {
+  display: flex;
+  align-items: center;
+}
+
+.signup-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* login */
+.login-buttons {
+  display: flex;
+  flex-direction: column; /* 버튼을 세로로 나열합니다. */
+  justify-content: center;
+  align-items: center; /* 버튼들을 중앙에 정렬합니다. */
+  margin: 20px auto;
+  font-size: 25px;
+}
+
+#signup-button {
+  border: none;
+  outline: none;
+  background-color: inherit ;
+  cursor: pointer;
+  margin-top: 25px;
+  font-size: 16px;
+}
+
+#signup-button:hover {
+  color: #424242;
+}
