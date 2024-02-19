@@ -1,41 +1,53 @@
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
-export const RecipeContainer = styled.div`
-  position: relative;
-  display: inline-block;
+export const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 55px;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    &::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, and Opera */
+    }
 `;
 
-export const ProfileContainer = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 10px;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.6);
-  padding: 5px;
+export const TitleBox = styled.div`
+  width: 1690px;
+  height: 100px;
+  margin: 0 85px;
+  margin-top: 35px;
+  border-radius: 10px;
+  background-color: #f4f4f4;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 `;
 
-export const FoodImageContainer = styled.img`
-  width: 500px;
-  height: 500px;
-  border-radius: 10px;
-  margin-bottom: 30px;
+export const Title = styled.text`
+  font-size: 32px;
+  font-weight: bold;
+  margin-left: 20px;
 `;
 
-export const ProfileImage = styled.img`
-  width: 40px;
-  height: 40px;
-  margin-left: 10px;
-  border-radius: 20px;
-  background-color: rgb(0, 0, 0);
-`;
-
-export const Nickname = styled.p`
-  margin: 10px;
+export const Date = styled.text`
   font-size: 20px;
+  margin-right: 20px;
+`;
+
+export const RecipeContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin: 0 85px;
+  margin-top: 30px;
+`;
+
+export const PostInfoContainer = styled.div`
+  position: relative;
+  display: inline-block;
 `;
 
 export const ButtonContainer = styled.div`
@@ -60,4 +72,39 @@ export const Icon = styled.img`
   width: 35px;
   height: 35px;
   margin-right: 14px;
+`;
+
+export const DetailContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+export const LeftSide = styled.div`
+  width: 550px;
+  height: 610px;
+  margin-left: 55px;
+`;
+
+export const RightSide = styled.div`
+  border-left: 1px solid #797979;
+  width: 550px;
+  height: 615px;
+  padding-left: 50px;
+`;
+
+export const Text = styled.text`
+  display: block;
+  margin-right: 15px;
+  margin-bottom: 40px;
+  font-size: 24px;
+  font-weight: bold;
+`;
+
+export const TextContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+export const StarImage = styled.img`
+  height: 35px;
 `;

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const RecipeContainer = styled.div`
   position: relative;
   display: inline-block;
+  margin-bottom: 30px;
 `;
 
 export const ProfileContainer = styled.div`

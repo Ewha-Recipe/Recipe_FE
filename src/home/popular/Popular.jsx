@@ -15,8 +15,8 @@ export function Popular() {
             foodImage={foodImage}
             foodName={foodName}
             difficulty={difficulty}
-            width="400px"
-            height="400px"
+            width="380px"
+            height="380px"
           />
         ))}
       </S.RecipeBoxContainer>
