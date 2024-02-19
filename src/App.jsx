@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { SignupForm } from './signUp/SignupForm';
+import { SignupForm } from './signup';
 import { Home } from './home';
-import { CreatePost } from './post/CreatePost';
+import { CreatePost } from './post';
 
 export default function App() {
   return (
