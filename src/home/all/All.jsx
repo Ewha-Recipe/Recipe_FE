@@ -1,35 +1,41 @@
-import * as S from './all.style';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { RecipeBox } from '../recipeBox';
-import { recipes } from '../home.const';
-import { useNavigate } from 'react-router-dom';
+import * as S from './all.style';
+
+const API_URL = 'http://13.125.245.200:5000';
 
 //TODO: handleRecipeBoxClick함수 -> navigate
 export function All() {
-  const navigate = useNavigate();
-  const handleMore = () => {
-    navigate('/all');
-  };
+  const [recipes, setRecipes] = useState([]);
 
-  {
-    /* 
-  const handleRecipeBoxClick = nickname => {
-    navigate(`/recipe/${nickname}`);
-  };
-  
+  useEffect(() => {
+    const fetchRecipes = async () => {
+      try {
+        const response = await fetch(`${API_URL}/foods`);
+        const data = await response.json();
+        console.log(response, data);
+        setRecipes(data);
+      } catch (error) {
+        console.error('Error fetching recipes: ', error);
+      }
+    };
+    fetchRecipes(); // 컴포넌트가 마운트될 때 데이터를 가져옴
+  }, []);
 
-  const handleRecipeBoxClick = nickname => {
-    if (nickname === recipes[3].nickname) {
-      navigate('/recipe');
-    }
-  };
-  */
-  }
+  // NOTE: difficulty를 숫자로 변환하기 위한 코드
+  // const star = {
+  //   VERY_EASY: 1,
+  // };
+  // img={star[difficulty]}
 
   return (
     <div>
       <S.TitleContainer>
         <S.Title>전체 레시피</S.Title>
-        <S.Button onClick={handleMore}>더보기</S.Button>
+        <Link to="/all">
+          <S.Button>더보기</S.Button>
+        </Link>
       </S.TitleContainer>
       <S.AllRecipeBoxContainer>
         {recipes.map(({ profileImage, nickname, foodImage, foodName, difficulty }) => (

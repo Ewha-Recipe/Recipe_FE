@@ -58,16 +58,6 @@ export function CreatePost() {
               </S.Select>
               <S.Select defaultValue="">
                 <option value="" disabled>
-                  난이도 선택
-                </option>
-                {STAR_OPTION.map(star => (
-                  <option key={star} value={star}>
-                    {star}
-                  </option>
-                ))}
-              </Select>
-              <Select defaultValue="">
-                <option value="" disabled>
                   카테고리 선택
                 </option>
                 {MENU_OPTION.map(menu => (

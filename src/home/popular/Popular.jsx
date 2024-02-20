@@ -1,8 +1,13 @@
-import * as S from './popular.style';
-import { RecipeBox } from '../recipeBox';
+import { navigate } from 'react-router-dom';
 import { recipes } from '../home.const';
+import { RecipeBox } from '../recipeBox';
+import * as S from './popular.style';
 
 export function Popular() {
+  const handleRecipeBoxClick = nickname => {
+    navigate(`/recipe/${nickname}`);
+  };
+
   return (
     <div>
       <S.Title>인기 레시피</S.Title>
