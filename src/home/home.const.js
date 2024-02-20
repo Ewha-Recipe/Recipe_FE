@@ -1,5 +1,6 @@
 export const recipes = [
   {
+    id: 1,
     profileImage: '/assets/id.png',
     nickname: '사용자1',
     foodImage: 'https://blog.kakaocdn.net/dn/xIOGb/btsDJE4VOhh/694Bq8FxKGkxYdC1ApE5k0/img.png',
@@ -7,6 +8,7 @@ export const recipes = [
     difficulty: '/assets/star2.png',
   },
   {
+    id: 2,
     profileImage: '/assets/id.png',
     nickname: '사용자2',
     foodImage: 'https://blog.kakaocdn.net/dn/zkddd/btsDIwNk8xP/JKoKs2LNOIFz5lZnudUrEk/img.png',
@@ -14,6 +16,7 @@ export const recipes = [
     difficulty: '/assets/star3.png',
   },
   {
+    id: 3,
     profileImage: '/assets/id.png',
     nickname: '사용자3',
     foodImage: 'https://blog.kakaocdn.net/dn/ctMU8E/btsDESp7S1A/GLbwbQPvuR6Hm3fg5IXVo1/img.png',
@@ -21,6 +24,7 @@ export const recipes = [
     difficulty: '/assets/star1.png',
   },
   {
+    id: 4,
     profileImage: '/assets/id.png',
     nickname: '사용자4',
     foodImage: 'https://blog.kakaocdn.net/dn/xDCIG/btsDDYR3yoL/QlzmRDsKVxJQqcrgiubLy0/img.png',
@@ -28,6 +32,7 @@ export const recipes = [
     difficulty: '/assets/star1.png',
   },
   {
+    id: 5,
     profileImage: '/assets/id.png',
     nickname: '사용자5',
     foodImage:

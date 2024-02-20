@@ -4,6 +4,7 @@ export const RecipeContainer = styled.div`
   position: relative;
   display: inline-block;
   margin-bottom: 30px;
+  cursor: pointer;
 `;
 
 export const ProfileContainer = styled.div`
@@ -24,6 +25,9 @@ export const FoodImageContainer = styled.img`
   //height: 400px;
   border-radius: 10px;
   margin-right: 30px;
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 export const ProfileImage = styled.img`
