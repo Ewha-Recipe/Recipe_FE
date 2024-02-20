@@ -5,8 +5,8 @@ export function RecipeBox({ id, width, height, foodImage, profileImage, nickname
   const navigate = useNavigate();
 
   const handleRecipeBoxClick = () => {
-    navigate(`/recipe/${id || ''}`);
-    console.log(1234, id);
+    // navigate(`/recipe/${id || ''}`);
+    navigate(`/recipe`);
   };
 
   return (
