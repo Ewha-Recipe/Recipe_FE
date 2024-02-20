@@ -1,13 +1,17 @@
-import { All, Popular, Random } from './';
 import { Navbar } from '../navbar';
+import { All } from './all';
+import { Popular } from './popular';
+import { Random } from './random';
 
 export function Home() {
   return (
     <>
       <Navbar />
-      <Popular />
-      <Random />
-      <All />
+      <div>
+        <Popular />
+        <Random />
+        <All />
+      </div>
     </>
   );
 }
