@@ -1,9 +1,8 @@
+import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { RecipeBox } from '../recipeBox';
 import * as S from './all.style';
-
-const API_URL = 'http://13.125.245.200:5000';
 
 //TODO: handleRecipeBoxClick함수 -> navigate
 export function All() {
@@ -12,10 +11,10 @@ export function All() {
   useEffect(() => {
     const fetchRecipes = async () => {
       try {
-        const response = await fetch(`${API_URL}/foods`);
-        const data = await response.json();
-        console.log(response, data);
+        const { data } = await axios.get('/foods');
         setRecipes(data);
+        // NOTE: 데이터 확인용 - 서연님 확인 후 콘솔 지워주세요~
+        console.log(data);
       } catch (error) {
         console.error('Error fetching recipes: ', error);
       }
@@ -38,14 +37,14 @@ export function All() {
         </Link>
       </S.TitleContainer>
       <S.AllRecipeBoxContainer>
-        {recipes.map(({ profileImage, nickname, foodImage, foodName, difficulty }) => (
+        {recipes.map(({ food_id, food_image, title, username }) => (
           <RecipeBox
-            key={nickname}
-            profileImage={profileImage}
-            nickname={nickname}
-            foodImage={foodImage}
-            foodName={foodName}
-            difficulty={difficulty}
+            key={food_id}
+            profileImage={''}
+            nickname={username}
+            foodImage={food_image}
+            foodName={title}
+            difficulty={3}
             width="380px"
             height="380px"
             //onClick={() => handleRecipeBoxClick(nickname)}
