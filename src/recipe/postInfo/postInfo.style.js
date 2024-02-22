@@ -15,13 +15,12 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const TitleBox = styled.div`
-  width: 1690px;
+  display: flex;
   height: 100px;
   margin: 0 85px;
   margin-top: 35px;
   border-radius: 10px;
   background-color: #f4f4f4;
-  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -30,12 +29,12 @@ export const TitleBox = styled.div`
 export const Title = styled.text`
   font-size: 32px;
   font-weight: bold;
-  margin-left: 20px;
+  margin-left: 40px;
 `;
 
 export const Date = styled.text`
   font-size: 20px;
-  margin-right: 20px;
+  margin-right: 40px;
 `;
 
 export const RecipeContainer = styled.div`
@@ -43,6 +42,7 @@ export const RecipeContainer = styled.div`
   flex-direction: row;
   margin: 0 85px;
   margin-top: 30px;
+  justify-content: center;
 `;
 
 export const PostInfoContainer = styled.div`
@@ -74,22 +74,11 @@ export const Icon = styled.img`
   margin-right: 14px;
 `;
 
-export const DetailContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-`;
-
-export const LeftSide = styled.div`
-  width: 550px;
-  height: 610px;
-  margin-left: 55px;
-`;
-
 export const RightSide = styled.div`
-  border-left: 1px solid #797979;
-  width: 550px;
-  height: 615px;
-  padding-left: 50px;
+  min-width: 300px;
+  height: 610px;
+  padding-top: 15px;
+  margin-left: 80px;
 `;
 
 export const Text = styled.text`

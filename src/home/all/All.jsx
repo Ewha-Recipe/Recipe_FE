@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { RecipeBox } from '../recipeBox';
 import * as S from './all.style';
 
-//TODO: handleRecipeBoxClick함수 -> navigate
 export function All() {
   const [recipes, setRecipes] = useState([]);
 
@@ -19,14 +18,8 @@ export function All() {
         console.error('Error fetching recipes: ', error);
       }
     };
-    fetchRecipes(); // 컴포넌트가 마운트될 때 데이터를 가져옴
+    fetchRecipes(); // 컴포넌트가 마운트될 때 데이터 가져옴
   }, []);
-
-  // NOTE: difficulty를 숫자로 변환하기 위한 코드
-  // const star = {
-  //   VERY_EASY: 1,
-  // };
-  // img={star[difficulty]}
 
   return (
     <div>
@@ -37,17 +30,16 @@ export function All() {
         </Link>
       </S.TitleContainer>
       <S.AllRecipeBoxContainer>
-        {recipes.map(({ food_id, food_image, title, username }) => (
+        {recipes.slice(0, 5).map(({ food_id, username, food_image, title, difficulty }) => (
           <RecipeBox
             key={food_id}
-            profileImage={''}
+            profileImage={'/assets/id.png'}
             nickname={username}
             foodImage={food_image}
             foodName={title}
-            difficulty={3}
+            difficulty={difficulty}
             width="380px"
             height="380px"
-            //onClick={() => handleRecipeBoxClick(nickname)}
           />
         ))}
       </S.AllRecipeBoxContainer>

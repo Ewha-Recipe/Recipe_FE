@@ -1,13 +1,14 @@
 import { useNavigate } from 'react-router-dom';
 import * as S from './recipeBox.style';
 
-export function RecipeBox({ id, width, height, foodImage, profileImage, nickname, foodName, difficulty }) {
+export function RecipeBox({ width, height, foodImage, profileImage, nickname, foodName, difficulty }) {
   const navigate = useNavigate();
 
   const handleRecipeBoxClick = () => {
-    // navigate(`/recipe/${id || ''}`);
     navigate(`/recipe`);
   };
+
+  const starImage = `/assets/star${difficulty}.png`;
 
   return (
     <S.RecipeContainer onClick={handleRecipeBoxClick}>
@@ -19,7 +20,7 @@ export function RecipeBox({ id, width, height, foodImage, profileImage, nickname
       <S.FoodName>{foodName}</S.FoodName>
       <S.DifficultyContainer>
         <S.Difficulty>난이도</S.Difficulty>
-        <S.StarImage src={difficulty} />
+        <S.StarImage src={starImage} />
       </S.DifficultyContainer>
     </S.RecipeContainer>
   );
