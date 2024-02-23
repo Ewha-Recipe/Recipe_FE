@@ -11,15 +11,21 @@ export function All() {
     const fetchRecipes = async () => {
       try {
         const { data } = await axios.get('/foods');
-        setRecipes(data);
-        // NOTE: 데이터 확인용 - 서연님 확인 후 콘솔 지워주세요~
-        console.log(data);
+        // 데이터가 배열인지 확인하고, 배열이 아니면 빈 배열을 설정
+        if (Array.isArray(data)) {
+          setRecipes(data);
+        } else {
+          console.error('Fetched data is not an array:', data);
+          setRecipes([]); // 데이터 형식이 올바르지 않을 경우 빈 배열로 설정
+        }
       } catch (error) {
         console.error('Error fetching recipes: ', error);
+        setRecipes([]); // 에러 발생 시 빈 배열로 설정
       }
     };
     fetchRecipes(); // 컴포넌트가 마운트될 때 데이터 가져옴
   }, []);
+  
 
   return (
     <div>
