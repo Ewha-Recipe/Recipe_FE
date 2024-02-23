@@ -12,14 +12,18 @@ export function Random() {
     const fetchRecipes = async () => {
       try {
         const { data } = await axios.get('/foods');
-        setRecipes(data);
-        // NOTE: 데이터 확인용 - 서연님 확인 후 콘솔 지워주세요~
-        console.log(data);
+        if (Array.isArray(data)) {
+          setRecipes(data);
+        } else {
+          console.error('Fetched data is not an array:', data);
+          setRecipes([]);
+        }
       } catch (error) {
         console.error('Error fetching recipes: ', error);
+        setRecipes([]);
       }
     };
-    fetchRecipes(); // 컴포넌트가 마운트될 때 데이터 가져옴
+    fetchRecipes();
   }, []);
 
   return (
