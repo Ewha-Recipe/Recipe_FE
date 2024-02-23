@@ -41,24 +41,20 @@ export function PostInfo() {
             </S.Button>
           </S.ButtonContainer>
         </S.PostInfoContainer>
-        <S.DetailContainer>
-          <S.LeftSide>
-            <S.TextContainer>
-              <S.Text>카테고리</S.Text>
-              <S.Text style={{ fontWeight: 'normal' }}>{recipe.category}</S.Text>
-            </S.TextContainer>
-            <S.TextContainer>
-              <S.Text>난이도</S.Text>
-              <S.StarImage src={recipe.difficulty} />
-            </S.TextContainer>
-            <S.Text style={{ marginBottom: '10px' }}>재료</S.Text>
-            <S.Text style={{ fontWeight: 'normal' }}>{recipe.ingredient}</S.Text>
-          </S.LeftSide>
-          <S.RightSide>
-            <S.Text style={{ marginBottom: '10px' }}>레시피 STEP</S.Text>
-            <S.Text style={{ fontWeight: 'normal' }}>{recipe.step}</S.Text>
-          </S.RightSide>
-        </S.DetailContainer>
+        <S.RightSide>
+          <S.TextContainer>
+            <S.Text>카테고리</S.Text>
+            <S.Text style={{ fontWeight: 'normal' }}>{recipe.category}</S.Text>
+          </S.TextContainer>
+          <S.TextContainer>
+            <S.Text>난이도</S.Text>
+            <S.StarImage src={recipe.difficulty} />
+          </S.TextContainer>
+          <S.Text style={{ marginBottom: '10px' }}>재료</S.Text>
+          <S.Text style={{ fontWeight: 'normal' }}>{recipe.ingredient}</S.Text>
+          <S.Text style={{ marginBottom: '10px' }}>레시피 STEP</S.Text>
+          <S.Text style={{ fontWeight: 'normal' }}>{recipe.step}</S.Text>
+        </S.RightSide>
       </S.RecipeContainer>
       <div ref={commentRef}>
         <Comment />

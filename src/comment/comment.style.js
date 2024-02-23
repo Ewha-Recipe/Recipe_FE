@@ -1,13 +1,12 @@
 import styled from 'styled-components';
 
 export const WriteContainer = styled.div`
-  width: 1690px;
+  display: flex;
   height: 400px;
   border-radius: 20px;
   margin: 0 85px;
   margin-top: 80px;
   background-color: #eeeeee;
-  display: flex;
   flex-direction: column;
 `;
 
@@ -31,12 +30,11 @@ export const WriteButton = styled.button`
 `;
 
 export const WriteComment = styled.textarea`
-  width: 1580px;
   height: 220px;
   border-radius: 20px;
   border: none;
   font-size: 20px;
-  margin: 0 auto;
+  margin: 0 40px;
   padding: 20px;
   resize: none;
 `;
