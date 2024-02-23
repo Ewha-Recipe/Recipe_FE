@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const BoxContainer = styled.div`
   display: flex;
   flex-direction: column;
+  width: 1690px;
   margin: 0 85px;
   margin-bottom: 25px;
   border-radius: 10px;

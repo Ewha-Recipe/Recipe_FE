@@ -21,7 +21,7 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
   font-size: 36px;
-  color: rgb(61, 109, 48);
+  color: #333;
   margin-bottom: 60px;
 `;
 
