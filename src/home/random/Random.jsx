@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import * as S from './random.style';
 import { RecipeBox } from '../recipeBox';
+import { profileImages } from '../../profileImages.const';
 
 export function Random() {
   const [recipes, setRecipes] = useState([]);
@@ -26,6 +27,8 @@ export function Random() {
     fetchRecipes();
   }, []);
 
+  let profileIndex = startIndex;
+
   return (
     <div>
       <S.Title>오늘의 추천</S.Title>
@@ -33,7 +36,7 @@ export function Random() {
         {recipes.slice(startIndex, recipesLength).map(({ food_id, username, food_image, title, difficulty }) => (
           <RecipeBox
             key={food_id}
-            profileImage={'/assets/id.png'}
+            profileImage={profileImages[profileIndex++]}
             nickname={username}
             foodImage={food_image}
             foodName={title}

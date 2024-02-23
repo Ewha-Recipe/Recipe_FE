@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { RecipeBox } from '../recipeBox';
 import * as S from './all.style';
+import { profileImages } from '../../profileImages.const';
 
 export function All() {
   const [recipes, setRecipes] = useState([]);
@@ -25,7 +26,6 @@ export function All() {
     };
     fetchRecipes(); // 컴포넌트가 마운트될 때 데이터 가져옴
   }, []);
-  
 
   return (
     <div>
@@ -36,10 +36,10 @@ export function All() {
         </Link>
       </S.TitleContainer>
       <S.AllRecipeBoxContainer>
-        {recipes.slice(0, 5).map(({ food_id, username, food_image, title, difficulty }) => (
+        {recipes.slice(0, 5).map(({ food_id, username, food_image, title, difficulty }, index) => (
           <RecipeBox
             key={food_id}
-            profileImage={'/assets/id.png'}
+            profileImage={profileImages[index]}
             nickname={username}
             foodImage={food_image}
             foodName={title}

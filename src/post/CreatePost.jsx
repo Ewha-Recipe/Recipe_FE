@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import * as S from './createPost.style';
 
 export function CreatePost() {
   const [image, setImage] = useState(null);
-  const navigate = useNavigate();
   const STAR_OPTION = [1, 2, 3, 4, 5];
   const MENU_OPTION = ['한식', '일식', '중식', '양식', '분식', '디저트'];
 
@@ -18,10 +17,6 @@ export function CreatePost() {
   const handleClickImageUpload = () => {
     const fileInput = document.getElementById('imageUpload');
     fileInput.click();
-  };
-
-  const handleCancel = () => {
-    navigate('/');
   };
 
   return (
@@ -74,9 +69,9 @@ export function CreatePost() {
           <S.TextArea placeholder="설명" />
         </S.TextAreaContainer>
         <S.ButtonContainer>
-          <S.Button type="button" onClick={handleCancel}>
-            취소
-          </S.Button>
+          <Link to="/">
+            <S.Button type="button">취소</S.Button>
+          </Link>
           <S.Button type="submit">등록하기</S.Button>
         </S.ButtonContainer>
       </S.Container>

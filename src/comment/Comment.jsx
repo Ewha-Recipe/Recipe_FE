@@ -1,14 +1,35 @@
-import React, { useState } from 'react';
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 import * as S from './comment.style';
-import { comments } from './comment.const';
 import { CommentBox } from './commentBox';
+import { dateArray, profileImages } from './comment.const';
 
 export function Comment() {
+  const [comments, setComments] = useState([]);
+  useEffect(() => {
+    const fetchComments = async () => {
+      try {
+        const { data } = await axios.get('/foods/2/comments');
+        if (Array.isArray(data)) {
+          setComments(data);
+        } else {
+          console.error('Fetched data is not an array:', data);
+          setComments([]);
+        }
+      } catch (error) {
+        console.error('Error fetching recipes: ', error);
+        setComments([]);
+      }
+    };
+    fetchComments();
+  }, []);
+
   const [inputComment, setInputComment] = useState('');
 
   const inputChange = event => {
     setInputComment(event.target.value);
   };
+
   return (
     <>
       <S.WriteContainer>
@@ -22,8 +43,8 @@ export function Comment() {
         <S.Icon src="/assets/comment.png" />
         <S.Title>전체 댓글 {comments.length}</S.Title>
       </S.TitleContainer>
-      {comments.map(({ profileImage, nickname, date, comment }) => (
-        <CommentBox profileImage={profileImage} nickname={nickname} date={date} comment={comment} />
+      {comments.map(({ username, content }, index) => (
+        <CommentBox profileImage={profileImages[index]} nickname={username} date={dateArray[index]} comment={content} />
       ))}
     </>
   );
