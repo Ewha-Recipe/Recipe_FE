@@ -32,28 +32,28 @@
 
 <details>
   <summary>Click to toggle</summary>
-  <pre>
+  <pre>📦src
 📦Recipe_FE  
  ┣ 📂public
  ┃ ┣ 📜index.html
- ┃ ┗ 📂assets
- ┃     📜comment.png
- ┃     📜email-icon.png
- ┃     📜ewharecipeLogo.png
- ┃     📜id.png
- ┃     📜like.png
- ┃     📜likefill.png
- ┃     📜login-icon.png
- ┃     📜logo.png
- ┃     📜logo.svg
- ┃     📜nickname-icon.png
- ┃     📜password.png
- ┃     📜preference-icon.png
- ┃     📜star1.png
- ┃     📜star2.png
- ┃     📜star3.png
- ┃     📜star4.png
- ┃     📜star5.png
+ ┃ ┣ 📂assets
+ ┃ ┃   📜comment.png
+ ┃ ┃   📜email-icon.png
+ ┃ ┃   📜ewharecipeLogo.png
+ ┃ ┃   📜id.png
+ ┃ ┃   📜like.png
+ ┃ ┃   📜likefill.png
+ ┃ ┃   📜login-icon.png
+ ┃ ┃   📜logo.png
+ ┃ ┃   📜logo.svg
+ ┃ ┃   📜nickname-icon.png
+ ┃ ┃   📜password.png
+ ┃ ┃   📜preference-icon.png
+ ┃ ┃   📜star1.png
+ ┃ ┃   📜star2.png
+ ┃ ┃   📜star3.png
+ ┃ ┃   📜star4.png
+ ┃ ┃   📜star5.png
  ┣ 📂src
  ┃ ┣ 📜App.css
  ┃ ┣ 📜App.jsx
