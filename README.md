@@ -7,7 +7,7 @@
 >    
 
 ## 📍 Demo
-<a href="https://recipe-fe-pi.vercel.app" target="_blank">Click here</a> to see our website.
+<a href="https://ewha-recipe.vercel.app" target="_blank">Click here</a> to see our website.
 
   <br>
 
