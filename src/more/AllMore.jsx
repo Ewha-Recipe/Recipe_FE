@@ -11,15 +11,15 @@ export function AllMore() {
     const fetchRecipes = async () => {
       try {
         const { data } = await axios.get('/foods');
-        setRecipes(data);
-        // NOTE: 데이터 확인용 - 서연님 확인 후 콘솔 지워주세요~
+        // 데이터가 배열이 아닌 경우 빈 배열로 설정
+        setRecipes(Array.isArray(data) ? data : []);
         console.log(data);
       } catch (error) {
         console.error('Error fetching recipes: ', error);
       }
     };
-    fetchRecipes(); // 컴포넌트가 마운트될 때 데이터 가져옴
-  }, []);
+    fetchRecipes();
+  }, []);  
 
   return (
     <div>
